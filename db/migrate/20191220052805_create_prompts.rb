@@ -5,6 +5,7 @@ class CreatePrompts < ActiveRecord::Migration[6.0]
       t.string :prompt_header
       t.string :prompt_body
       t.integer :lesson_id
+      t.string :category
       
       t.timestamps
     end

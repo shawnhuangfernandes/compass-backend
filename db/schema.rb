@@ -35,13 +35,7 @@ ActiveRecord::Schema.define(version: 2019_12_20_053034) do
     t.string "prompt_header"
     t.string "prompt_body"
     t.integer "lesson_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "user_curriculums", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "curriculum_id"
+    t.string "category"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
