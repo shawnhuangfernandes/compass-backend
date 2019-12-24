@@ -40,13 +40,15 @@ ActiveRecord::Schema.define(version: 2019_12_20_053034) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "user_prompts", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "prompt_id"
+  create_table "responses", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "prompt_id"
     t.string "response"
     t.boolean "complete"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["prompt_id"], name: "index_responses_on_prompt_id"
+    t.index ["user_id"], name: "index_responses_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

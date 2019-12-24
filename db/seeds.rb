@@ -1,8 +1,8 @@
 # this file creates all of the seed data that the database will be created with
 
 # TESTING - create a user
-User.create(username: "Huangnandes", name: "Shawn Huang Fernandes")
-User.create(username: "Fonzie", name: "Alfonso Pruneda Suarez")
+user1 = User.create(username: "Huangnandes", name: "Shawn Huang Fernandes")
+user2 = User.create(username: "Fonzie", name: "Alfonso Pruneda Suarez")
 
 # Create a curriculum
 meaning_curriculum = Curriculum.create(name: "Meaning", progress: 0)
@@ -51,6 +51,36 @@ prompt5 = intro_lesson.create_prompt(
     category: "Activity"
 )
 
+# start off the "Shawn" user with some entry data
+up1 = Response.create(
+    user_id: user1.id, 
+    prompt_id: prompt1.id, 
+    response: nil,
+    complete: true)
+
+up2 = Response.create(
+    user_id: user1.id, 
+    prompt_id: prompt2.id, 
+    response: nil,
+    complete: true)
+
+up3 = Response.create(
+    user_id: user1.id, 
+    prompt_id: prompt3.id, 
+    response: nil,
+    complete: true)
+
+up4 = Response.create(
+    user_id: user1.id, 
+    prompt_id: prompt4.id, 
+    response: nil,
+    complete: true)
+
+up5 = Response.create(
+    user_id: user2.id, 
+    prompt_id: prompt5.id, 
+    response: "I have entered a response!",
+    complete: true)
 
 
 

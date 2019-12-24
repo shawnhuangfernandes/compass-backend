@@ -1,6 +1,4 @@
 class User < ApplicationRecord
-    has_many :prompts, through: :user_prompts
-    has_many :user_prompts
-
-
+    has_many :responses
+    has_many :prompts, through: :responses
 end

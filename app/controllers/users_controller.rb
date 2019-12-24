@@ -16,7 +16,6 @@ class UsersController < ApplicationController
     # GET /users/:id
     def show
         render json: @user
-        
     end
 
     # PUT /users/:id
