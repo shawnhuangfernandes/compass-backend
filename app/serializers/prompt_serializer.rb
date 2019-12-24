@@ -1,3 +1,3 @@
 class PromptSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :title, :header, :body, :category
 end

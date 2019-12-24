@@ -2,9 +2,8 @@ class CreatePrompts < ActiveRecord::Migration[6.0]
   def change
     create_table :prompts do |t|
       t.string :title
-      t.string :prompt_header
-      t.string :prompt_body
-      t.integer :lesson_id
+      t.string :header
+      t.string :body
       t.string :category
       
       t.timestamps
