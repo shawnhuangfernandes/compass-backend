@@ -7,7 +7,13 @@ class PromptsController < ApplicationController
     end
 
     def show
-        render json: @prompt
+        render json: {
+            title: @prompt.title,
+            header: @prompt.header,
+            body: @prompt.body,
+            category: @prompt.category,
+            response: Response.find_by(user_id: params[:user_id], prompt_id: @prompt.id)
+        }
     end
 
     private
