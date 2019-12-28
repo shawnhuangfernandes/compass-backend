@@ -9,8 +9,16 @@ class UsersController < ApplicationController
 
     # POST /users
     def create
-        @user = User.create!(user_params)
-        render json: @user
+        @user = User.new(user_params)
+
+        if @user.valid?
+            @user.save
+            render json: @user
+        else
+            render json: {
+                error: "error"
+            }
+        end
     end
 
     # GET /users/:id
@@ -28,6 +36,17 @@ class UsersController < ApplicationController
     def destroy
         @user.destroy
         render json: User.all
+    end
+
+    def findUser
+        @user = User.find_by(username: params[:username])
+        if @user
+            render json: @user
+        else
+            render json: {
+                message: "Did not find user!"
+            }
+        end
     end
 
     private
