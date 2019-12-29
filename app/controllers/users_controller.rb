@@ -16,7 +16,7 @@ class UsersController < ApplicationController
             render json: @user
         else
             render json: {
-                error: "error"
+                message: "Username already exists, pick another"
             }
         end
     end
