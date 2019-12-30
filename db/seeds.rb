@@ -30,7 +30,7 @@ prompt4 = Prompt.create(
     title: 'What Is A Purpose Statement',
     header: "Finding Your Purpose",
     body: "Finding Key Phrases, Common Themes, and creating a Rough Draft",
-    category: "Activity"
+    category: "Reading"
 )
 
 prompt5 = Prompt.create(
@@ -46,43 +46,6 @@ prompt6 = Prompt.create(
     body: "https://mod4-project.s3.us-east-2.amazonaws.com/0B+Video+Michael+Jr.%2C+Know+Your+Why+(Length_+3_49).mp4",
     category: "Video"
 )
-
-# start off the "Shawn" user with some entry data
-u1p1 = Response.create(
-    user_id: user1.id, 
-    prompt_id: prompt1.id, 
-    response: nil,
-    complete: true)
-
-u1p2 = Response.create(
-    user_id: user1.id, 
-    prompt_id: prompt2.id, 
-    response: nil,
-    complete: true)
-
-u1p3 = Response.create(
-    user_id: user1.id, 
-    prompt_id: prompt3.id, 
-    response: "I submitted the activity!",
-    complete: true)
-
-u1p4 = Response.create(
-    user_id: user1.id, 
-    prompt_id: prompt4.id, 
-    response: "I submitted the activity!",
-    complete: true)
-    
-u1p5 = Response.create(
-    user_id: user1.id, 
-    prompt_id: prompt5.id, 
-    response: "I submitted the activity!",
-    complete: true)
-    
-u1p6 = Response.create(
-    user_id: user1.id, 
-    prompt_id: prompt5.id, 
-    response: nil,
-    complete: true)
 
 
 

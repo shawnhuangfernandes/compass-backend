@@ -3,7 +3,7 @@ class CreateResponses < ActiveRecord::Migration[6.0]
     create_table :responses do |t|
       t.belongs_to :user
       t.belongs_to :prompt
-      t.string :response
+      t.string :body
       t.boolean :complete
 
       t.timestamps

@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2019_12_20_053034) do
   create_table "responses", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "prompt_id"
-    t.string "response"
+    t.string "body"
     t.boolean "complete"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
