@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  post '/users/find-user', to: 'users#findUser'
+  post '/find-user', to: 'users#findUser'
   
   resources :users do
     resources :prompts

@@ -1,24 +1,35 @@
-# README
+# COMPASS BACK-END APPLICATION
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
 
-Things you may want to cover:
+Compass is a full-stack application I built as part of Flatiron's software engineering program. It is supposed to be a simple education curriculum web application centered around life purpose. It consists of a front-end (built using React) and back-end (built using Rails). It was built over the course of a week as an educational excercise to build my very first full stack application.
 
-* Ruby version
+## Requirements
 
-* System dependencies
+For development, you will need 
+- Ruby
+- Rails
+- Github
 
-* Configuration
+## Install & Run
+    **Front End**
+    $ git clone git@github.com:shawnhuangfernandes/compass-frontend.git
+    $ cd PROJECT
+    $ npm install
+    $ npm start
 
-* Database creation
+    **Back End**
+    $ git clone git@github.com:shawnhuangfernandes/compass-backend.git
+    $ cd PROJECT
+    $ bundle install
+    $ rails s
+    
+    **Keep in mind that the code is written assuming the backend uses a root url of http://localhost:3000/**
+    **Be sure to run the backend rails server located at https://github.com/shawnhuangfernandes/compass-backend**
 
-* Database initialization
+## Languages & tools
 
-* How to run the test suite
+- [React](http://facebook.github.io/react) is used for UI.
+- [Semantic UI React](https://react.semantic-ui.com/) is used for templating and quick components
+- [React-Youtube](https://www.npmjs.com/package/react-youtube) is for embedding youtube videos
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

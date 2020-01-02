@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    before_action :set_user, only: [:show, :update, :destroy]
+    before_action :set_user, only: [:show, :destroy]
   
     # GET /users
     def index
@@ -28,8 +28,16 @@ class UsersController < ApplicationController
 
     # PUT /users/:id
     def update
-        @user.update(user_params)
-        render json: @user
+        @user = User.find_by(username: params[:username])
+        if !@user
+
+            @user = User.find(params[:id]).update(username: params[:username], name: params[:name])
+            render json: @user
+        else
+            render json: {
+                message: "Username already exists, pick another"
+            }
+        end
     end
 
     # DELETE /users/:id
@@ -52,7 +60,7 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.permit(:username, :name, :icon_gif)
+        params.permit(:username, :name)
     end
 
     def set_user
